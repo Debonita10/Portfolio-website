@@ -1,0 +1,91 @@
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+align-items: center;
+  background-image: url('/public/navimg.webp');
+  background-size:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+ 
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.togglebtn {
+  display: none; 
+}
+
+
+.togglebtn button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+  .togglebtn {
+    display: flex;
+    align-items: center;
+  }
+
+  .links {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    position:fixed;
+  }
+
+  .links.mobile {
+    display: flex;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .links.desktop {
+    display: flex;
+  }
+
+  #open {
+    height: 100px;
+  }
+
+  #close {
+    height: 100px;
+  }
+
+  .togglebtn {
+    display: none; 
+  }
+}
